@@ -10,8 +10,8 @@ import (
 )
 
 var (
-	writerSource = fmt.Sprintf("sqluser:%s@(%s:3306)/example", os.Getenv("WRITER_PASSWORD"), os.Getenv("WRITER_HOST"))
-	readerSource = fmt.Sprintf("sqluser:%s@(%s:3306)/example", os.Getenv("READER_PASSWORD"), os.Getenv("READER_HOST"))
+	writerSource = fmt.Sprintf("%s:%s@(%s:3306)/example", os.Getenv("WRITER_USER"), os.Getenv("WRITER_PASSWORD"), os.Getenv("WRITER_HOST"))
+	readerSource = fmt.Sprintf("%s:%s@(%s:3306)/example", os.Getenv("READER_USER"), os.Getenv("READER_PASSWORD"), os.Getenv("READER_HOST"))
 )
 
 type Info struct {
